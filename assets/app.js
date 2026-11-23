@@ -202,7 +202,7 @@ function bindProduct(slug,q){
       if(p.colorSizes&&p.colorSizes[cn]&&p.colorSizes[cn].indexOf(s)<0) dis=true;
       b.disabled=dis; if(dis&&state.size===s){state.size=null;b.classList.remove('on');$('#sizeName').textContent='Select'}
     });
-    if(p.youthColors&&p.youthColors.indexOf(cn)<0) note='Youth sizes come in '+p.youthColors.join(' and ')+'.';
+    if(p.youthColors&&p.youthColors.indexOf(cn)<0) note='Youth sizes come in '+(p.youthColors.length>2?p.youthColors.slice(0,-1).join(', ')+' and '+p.youthColors[p.youthColors.length-1]:p.youthColors.join(' and '))+'.';
     else if(p.colorSizes&&p.colorSizes[cn]&&p.colorSizes[cn].length<p.sizes.length){var miss=p.sizes.filter(function(s){return p.colorSizes[cn].indexOf(s)<0});note=cn+' isn\'t made in '+miss.join(', ')+'.'}
     $('#sizeNote').textContent=note;
   }

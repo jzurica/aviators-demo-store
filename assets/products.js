@@ -561,6 +561,11 @@ window.AFA_PRODUCTS=[
     ]
    }
   ],
+  "youthColors": [
+   "Navy",
+   "Sport Grey",
+   "White"
+  ],
   "colorSizes": {
    "Navy": [
     "YXS",
